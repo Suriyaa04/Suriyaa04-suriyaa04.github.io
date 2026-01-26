@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- UIkit JS -->
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit-icons.js"></script>
+
+    <title>Suriya Narayanan Surendra Babu | Data Analytics Portfolio</title>
+</head>
+<body>
+
+
+<!-- ================= NAVBAR (DESKTOP) ================= -->
+<nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right"
+     uk-navbar
+     uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-sticky-below">
+
+    <a href="#home" class="uk-navbar-item uk-logo uk-light nav-welcome">
+        Welcome To My Portfolio
+    </a>
+
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-light">
+            <li><a href="#about" uk-scroll="offset: 120">About</a></li>
+            <li><a href="#skills" uk-scroll="offset: 120">Skills</a></li>
+            <li><a href="#education" uk-scroll="offset: 120">Education</a></li>
+            <li><a href="#projects" uk-scroll="offset: 120">Projects</a></li>
+            <li><a href="#contact" uk-scroll="offset: 120">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+<!-- ================= NAVBAR (MOBILE) ================= -->
+<nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right"
+     uk-navbar
+     uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-sticky-below">
+
+    <div class="uk-navbar-left">
+        <a href="#home" class="uk-navbar-item uk-logo uk-light">
+            Portfolio
+        </a>
+    </div>
+
+    <div class="uk-navbar-right">
+        <button uk-toggle="target: #offcanvas-nav"
+                type="button"
+                uk-navbar-toggle-icon></button>
+    </div>
+</nav>
+
+
+<!-- ================= MOBILE OFFCANVAS ================= -->
+<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <li><a href="#home" uk-scroll="offset: 120">Home</a></li>
+            <li><a href="#about" uk-scroll="offset: 120">About</a></li>
+            <li><a href="#skills" uk-scroll="offset: 120">Skills</a></li>
+            <li><a href="#education" uk-scroll="offset: 120">Education</a></li>
+            <li><a href="#projects" uk-scroll="offset: 120">Projects</a></li>
+            <li><a href="#contact" uk-scroll="offset: 120">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- ================= HOME (OPENING SCREEN) ================= -->
+<section id="home" class="home-hero">
+
+    <!-- LEFT TEXT -->
+    <div class="home-content">
+        <h1 class="home-title uk-light uk-text-left">
+            I'm
+            <span class="hero-name animate-name">
+                Suriya Narayanan
+                <span class="last-name">Surendra Babu,</span>
+            </span><br>
+            <span class="hero-subtitle">
+                An <span class="highlight-text">MSc Data Analytics Student</span><br>
+                Specializing in Machine Learning &<br>
+                Business Intelligence.
+            </span>
+
+
+        </h1>
+
+        <div class="hero-buttons">
+            <a href="#about"
+               class="uk-button uk-button-secondary"
+               uk-scroll="offset: 120">
+                About Me
+            </a>
+
+            <a href="assets\resume\Suriya Narayanan Surendra Babu_CV_Msc Data Analytics.pdf"
+               class="uk-button uk-button-default"
+               target="_blank">
+                Resume
+            </a>
+        </div>
+    </div> <!-- ✅ CLOSE home-content -->
+
+    <!-- RIGHT IMAGE -->
+    <div class="home-image">
+        <img src="assets\Profile.jpg"
+             alt="Suriya Narayanan Surendra Babu"
+             class="home-profile-img animate-image">
+    </div>
+
+</section>
+<!-- ================= HOME END ================= -->
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+    <h3 class="uk-margin-xlarge-left uk-light">About Me – Suriya Narayanan Surendra Babu</h3>
+
+    <p class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        I am an MSc Data Analytics student with a background in Computer Science Engineering,
+        with hands-on experience in data analysis, machine learning, and business intelligence.
+        I enjoy working across the full data lifecycle — from data cleaning and feature engineering
+        to building predictive models and presenting insights through dashboards and visualizations.
+        Through academic projects, I have worked on real-world problems such as customer financial
+        health modeling, scalable data systems, and analytics-driven decision support using Python,
+        SQL, Power BI, Tableau, and PySpark.
+    </p>
+
+    <!-- QUICK LINKS -->
+    <div class="uk-margin-xlarge-left">
+        <a href="mailto:suryaofficial04@gmail.com" uk-icon="mail" class="uk-button-text uk-light"></a>
+        &nbsp;
+        <a href="https://www.linkedin.com/in/suriyanarayanan-s04" target="_blank"
+           uk-icon="linkedin" class="uk-button-text uk-light"></a>
+        &nbsp;
+        <a href="https://github.com/Suriyaa04" target="_blank"
+           uk-icon="github" class="uk-button-text uk-light"></a>
+    </div>
+</section>
+
+<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+
+<!-- ================= TECHNICAL SKILLS ================= -->
+<section id="skills"
+         class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+
+    <h3 class="uk-margin-xlarge-left uk-light">Technical Skills</h3>
+
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right
+                uk-child-width-1-2@m uk-grid-match"
+         uk-grid
+         uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: .skill-card; delay: 200">
+
+        <!-- Programming -->
+        <div class="skill-card">
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="assets\logo\python.png" width="45" alt="Python">
+                <img src="assets\logo\sql.png" width="45" alt="SQL" class="uk-margin-small-left">
+                <h4 class="uk-margin-small-top">Programming</h4>
+                <p class="uk-margin-remove">
+                    Python (Pandas, NumPy, Scikit-learn)
+                </p>
+                <p class="uk-margin-remove">
+                    SQL (MySQL, PostgreSQL)
+                </p>
+            </div>
+        </div>
+
+        <!-- Data Analysis -->
+        <div class="skill-card">
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="assets\logo\analytics.png" width="45" alt="Data Analysis">
+                <h4 class="uk-margin-small-top">Data Analysis</h4>
+                <p class="uk-margin-remove">
+                    Statistical Analysis & Hypothesis Testing
+                </p>
+                <p class="uk-margin-remove">
+                    Predictive Modeling & Feature Engineering
+                </p>
+            </div>
+        </div>
+
+        <!-- Data Visualization -->
+        <div class="skill-card">
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="assets\logo\tableau.png" width="45" alt="Tableau">
+                <img src="assets\logo\power-bi.png" width="45" alt="Power BI" class="uk-margin-small-left">
+                <h4 class="uk-margin-small-top">Data Visualization</h4>
+                <p class="uk-margin-remove">
+                    Interactive Dashboards & Storytelling
+                </p>
+                <p class="uk-margin-remove">
+                    Matplotlib & Seaborn (EDA)
+                </p>
+            </div>
+        </div>
+
+        <!-- Database Management -->
+        <div class="skill-card">
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="assets\logo\database-management.png" width="45" alt="Database">
+                <h4 class="uk-margin-small-top">Database Management</h4>
+                <p class="uk-margin-remove">
+                    Query Optimization & Stored Procedures
+                </p>
+                <p class="uk-margin-remove">
+                    Data Warehousing & Relational Design
+                </p>
+            </div>
+        </div>
+
+        <!-- Excel & Automation -->
+        <div class="skill-card">
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="assets\logo\excel.png" width="45" alt="Excel">
+                <h4 class="uk-margin-small-top">Excel & Automation</h4>
+                <p class="uk-margin-remove">
+                    Power Query & Advanced PivotTables
+                </p>
+                <p class="uk-margin-remove">
+                    VBA Automation & Reporting
+                </p>
+            </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="skill-card">
+            <div class="uk-card uk-card-secondary uk-card-body uk-text-center">
+                <img src="assets\logo\machine-learning.png" width="45" alt="Machine Learning">
+                <h4 class="uk-margin-small-top">Machine Learning</h4>
+                <p class="uk-margin-remove">
+                    Regression, Classification & Clustering
+                </p>
+                <p class="uk-margin-remove">
+                    Model Evaluation & Explainable AI
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ================= TECHNICAL SKILLS END ================= -->
+<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+
+    <h3 class="uk-margin-xlarge-left uk-light">Education</h3>
+
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right"
+         uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: .edu-card; delay: 200">
+
+        <!-- MSc -->
+        <div class="edu-card uk-margin uk-card uk-card-secondary uk-card-body">
+            <p class="uk-text-small uk-text-muted uk-margin-remove">
+                <strong>2025 – 2026</strong> | National College of Ireland | Dublin, Ireland
+            </p>
+            <h4 class="uk-margin-small-top uk-margin-remove-bottom">MSc Data Analytics</h4>
+            <p class="uk-margin-small-top">
+                <strong>Modules:</strong> Statistics and Optimization, Analytics Programming and Data Visualization,
+                Data Governance, Ethics and Sustainability, Business Intelligence and Business Analytics,
+                Data Mining and Machine Learning, Deep Learning and Generative AI,
+                Data Intensive Scalable Systems, Domain Application.
+            </p>
+        </div>
+
+        <!-- BE -->
+        <div class="edu-card uk-margin uk-card uk-card-secondary uk-card-body">
+            <p class="uk-text-small uk-text-muted uk-margin-remove">
+                <strong>2020 – 2024</strong> | Saveetha School of Engineering | Chennai, India
+            </p>
+            <h4 class="uk-margin-small-top uk-margin-remove-bottom">BE Computer Science Engineering</h4>
+            <p class="uk-margin-remove"><strong>Grade:</strong> First Class Honors</p>
+            <p class="uk-margin-small-top">
+                <strong>Modules:</strong> Data Structures and Algorithms, Database Management Systems (DBMS),
+                Artificial Intelligence and Machine Learning, Cloud Computing,
+                Ethical Hacking, Python Programming.
+            </p>
+        </div>
+
+        <!-- HSC -->
+        <div class="edu-card uk-margin uk-card uk-card-secondary uk-card-body">
+            <p class="uk-text-small uk-text-muted uk-margin-remove">
+                <strong>2018 – 2019</strong> | Velammal Vidhyashram | Chennai, India
+            </p>
+            <h4 class="uk-margin-small-top uk-margin-remove-bottom">
+                Higher Secondary Certificate (Class 12)
+            </h4>
+            <p class="uk-margin-remove"><strong>Board:</strong> CBSE</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= EDUCATION END ================= -->
+
+
+
+
+<!-- ================= INTERNSHIP EXPERIENCE ================= -->
+<section id="internship" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+
+    <h3 class="uk-margin-xlarge-left uk-light">Internship Experience</h3>
+
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right"
+         uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: .intern-card; delay: 200">
+
+        <div class="intern-card uk-card uk-card-secondary uk-card-body">
+
+            <p class="uk-text-small uk-text-muted uk-margin-remove">
+                <strong>Dec 2023 – Feb 2024</strong> | PrepInsta Pvt Ltd
+            </p>
+
+            <h4 class="uk-margin-small-top uk-light">Data Analyst Intern</h4>
+
+            <!-- POINTS WITH SAME ANIMATION AS SKILLS & EDUCATION -->
+            <ul class="intern-points uk-margin-top"
+                uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > li; delay: 150">
+
+                <li class="intern-point">
+                    📊 Built an <strong>Excel Bike Buyers Dashboard</strong> using PivotTables and VLOOKUP,
+                    improving customer trend analysis and visualization efficiency by <strong>30%</strong>.
+                </li>
+
+                <li class="intern-point">
+                    🧠 Solved a complex <strong>SQL case study</strong> in Knight Lab using advanced JOINs,
+                    subqueries, and aggregate functions, achieving <strong>100% solution accuracy</strong>.
+                </li>
+
+                <li class="intern-point">
+                    🌍 Designed an interactive <strong>Tableau dashboard</strong> to visualize air pollution
+                    levels across India with geospatial mapping and trend analysis.
+                </li>
+
+                <li class="intern-point">
+                    ❤️ Analyzed <strong>Fitbit data</strong> through data cleaning, statistical analysis,
+                    and visualization to extract insights on activity, heart rate, and sleep patterns.
+                </li>
+
+                <li class="intern-point">
+                    🤝 Collaborated with cross-functional teams to ensure accurate data interpretation
+                    and alignment with business objectives.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTERNSHIP END ================= -->
+
+
+
+<!-- ================= PROJECTS ================= -->
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+    <h3 class="uk-margin-xlarge-left uk-light">Projects</h3>
+    <p class="uk-margin-xlarge-left">Projects that I’ve been working on</p>
+
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right"
+         uk-scrollspy="cls: uk-animation-slide-bottom-small; target: > div; delay: 150">
+
+        <!-- Project 1 -->
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>1. Modelling Financial Health of Customers Using Multi-Source Banking Behavior Data (MSc Project)</h4>
+
+            <p>
+                Built an end-to-end machine learning system to assess customer financial health using multi-source banking behavior data, addressing the limitations of traditional rule-based credit scoring.
+            </p>
+
+            <p>
+                <strong>Key Highlights:</strong><br>
+                • Trained ML models on <strong>45,000+ bank customer records</strong>, engineering <strong>60+ features</strong> to classify customers into Stable, At-Risk, and Vulnerable tiers<br>
+                • Applied <strong>K-Means clustering</strong> for behavioral segmentation and used <strong>SHAP/LIME</strong> to explain model predictions, improving transparency and trust<br>
+                • Delivered insights through <strong>Power BI dashboards</strong> and deployed a <strong>FastAPI-based real-time scoring system</strong> for instant risk evaluation
+            </p>
+
+            <p>
+                <strong>Outcome:</strong><br>
+                Achieved <strong>79% accuracy</strong> using XGBoost and delivered a production-ready, explainable financial health scoring solution.
+            </p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>2. Analyzing Global Agriculture Trade Indices Using Big Data Pipelines</h4>
+
+            <p>
+                Developed a scalable big data analytics pipeline to analyze global agricultural trade trends across regions and commodities using large-scale historical datasets.
+            </p>
+
+            <p>
+                <strong>Key Highlights:</strong><br>
+                • Processed and transformed <strong>416,000+ FAOSTAT trade records (2000–2023)</strong> into a structured PostgreSQL database<br>
+                • Built an automated <strong>PySpark + AWS S3</strong> data pipeline with <strong>7+ preprocessing steps</strong><br>
+                • Designed and deployed an interactive <strong>Power BI dashboard</strong> visualizing <strong>6 key KPIs</strong> across <strong>257 regions and 186 commodities</strong><br>
+                • Automated weekly pipeline refresh using <strong>Windows Task Scheduler and batch scripts</strong>
+            </p>
+
+            <p>
+                <strong>Outcome:</strong><br>
+                Enabled continent-level trade analytics with zero manual intervention through a fully automated big data pipeline.
+            </p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+            <h4>3. ECG Signal Analysis for Heart Malfunction Detection</h4>
+
+            <p>
+                Developed a machine learning solution to analyze ECG signals and accurately detect cardiac abnormalities using time-series data.
+            </p>
+
+            <p>
+                <strong>Key Highlights:</strong><br>
+                • Processed and analyzed <strong>5,000+ ECG signal samples</strong><br>
+                • Implemented feature extraction and classification algorithms<br>
+                • Achieved <strong>95% accuracy</strong> in detecting abnormal heart rhythms
+            </p>
+
+            <p>
+                <strong>Outcome:</strong><br>
+                Delivered a reliable ML-based heart abnormality detection model with high classification accuracy.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+
+    <h3 class="uk-margin-xlarge-left uk-light">Contact</h3>
+
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right uk-light">
+
+        <p>
+            <span uk-icon="phone"></span>
+            <strong>Phone:</strong>
+            <a href="tel:+353899449570" class="uk-link-text">+353 89 944 9570</a> |
+            <a href="tel:+916369944963" class="uk-link-text">+91 63699 44963</a>
+        </p>
+
+        <p>
+            <span uk-icon="mail"></span>
+            <strong>Email:</strong>
+            <a href="mailto:suryaofficial04@gmail.com" class="uk-link-text">
+                suryaofficial04@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <span uk-icon="linkedin"></span>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/suriyanarayanan-s04" target="_blank" class="uk-link-text">
+                linkedin.com/in/suriyanarayanan-s04
+            </a>
+        </p>
+
+        <p>
+            <span uk-icon="github"></span>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/Suriyaa04" target="_blank" class="uk-link-text">
+                github.com/Suriyaa04
+            </a>
+        </p>
+
+    </div>
+</section>
+
+<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+
+</body>
+</html>

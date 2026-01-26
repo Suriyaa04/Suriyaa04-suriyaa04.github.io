@@ -1,0 +1,266 @@
+html{
+    font-family: IBM Plex Mono;
+}
+
+.skill-card .uk-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.highlight-text {
+    color: #8ab4f8;                 /* same accent as last name */
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+
+.skill-card .uk-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+}
+
+.edu-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+.intern-points {
+    list-style: none;
+    padding-left: 0;
+}
+
+.intern-point {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 14px;
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+
+.intern-point::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #8ab4f8;
+    font-size: 1.1rem;
+}
+
+/* Project cards hover animation */
+#projects .uk-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#projects .uk-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Offset for sticky navbar */
+section {
+    scroll-margin-top: 100px; /* adjust to navbar height */
+}
+
+/* Hero buttons container */
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 34px; /* pushes buttons slightly down */
+}
+
+/* Buttons sizing */
+.hero-buttons .uk-button {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+}
+
+/* Resume button subtle outline */
+.hero-buttons .uk-button-default {
+    background: transparent;
+    color: #d0d0d0;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-buttons .uk-button-default:hover {
+    border-color: #8ab4f8;
+    color: #ffffff;
+}
+
+
+
+/* Default state (top of page) */
+.nav-welcome {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* When navbar becomes sticky (scroll down) */
+.uk-sticky-below .nav-welcome {
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+}
+
+/* Base navbar */
+.uk-navbar-container {
+    background: transparent;
+    padding: 18px 0;
+    transition: 
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        padding 0.35s ease,
+        backdrop-filter 0.35s ease;
+}
+
+/* Sticky state (UIkit uses this class) */
+.uk-sticky-below {
+    background: rgba(15, 15, 15, 0.75) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari fix */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+}
+
+
+/* ================= OPENING HERO ================= */
+.home-hero {
+    min-height: calc(100vh - 80px); /* account for navbar */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;           /* vertical centering */
+    gap: clamp(40px, 6vw, 80px);
+    padding-inline: clamp(24px, 8vw, 120px);
+}
+
+
+
+
+
+/* LEFT CONTENT */
+.home-content {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* 🔥 vertical centering */
+}
+
+
+
+/* MAIN TITLE */
+.home-title {
+    font-size: clamp(2.2rem, 3vw, 3rem);
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+}
+
+/* NAME STYLING */
+.hero-name {
+    white-space: nowrap;           /* keep name on one line */
+    font-size: clamp(2.2rem, 3.2vw, 3rem);
+    display: inline-block;
+}
+
+.hero-subtitle {
+    display: block;
+    margin-top: 24px;
+    font-size: clamp(2.1rem, 2.1vw, 2.1rem);
+    line-height: 1.55;
+    letter-spacing: 0.2px;
+    color: #e6e6e6;
+}
+
+
+/* BUTTON SPACING */
+.home-content .uk-button {
+    margin-top: 16px;
+}
+
+/* RIGHT IMAGE */
+.home-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-profile-img {
+    width: clamp(280px, 25vw, 370px);
+    max-width: 100%;
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+
+/* ================= NAME STYLING ================= */
+
+
+
+/* Subtle accent for last name */
+.last-name {
+    color: #8ab4f8;              /* soft blue accent */
+}
+
+/* Name animation (first) */
+.animate-name {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: nameFadeUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes nameFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 960px) {
+    .home-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 120px;
+    }
+
+    .home-content {
+        margin-left: 24px;
+        margin-right: 24px;
+        max-width: 100%;
+    }
+
+    .home-title {
+        font-size: 2.2rem;
+        margin-bottom: 32px;
+    }
+
+    .hero-name {
+        white-space: normal;
+        font-size: 2.4rem;
+    }
+
+    .home-image {
+        margin: 32px auto 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-profile-img {
+        width: 260px;
+    }
+}
+
+/* for desktop */
+
+@media (min-width: 1800px) {
+    .home-profile-img {
+        width: 420px;
+    }
+}
