@@ -274,27 +274,23 @@ section {
 
 
 /* for mobile */
-/* ================= FINAL MOBILE FIX (DO NOT EDIT AGAIN) ================= */
+
+/* =========================================================
+   FINAL MOBILE FIX – DO NOT EDIT ABOVE THIS
+   ========================================================= */
 @media (max-width: 768px) {
 
-  /* ---------------- RESET & SCROLL FIX ---------------- */
+  /* ---------------- GLOBAL RESET ---------------- */
   html, body {
     width: 100%;
     max-width: 100%;
-    height: auto;
     overflow-x: hidden;
     overflow-y: auto;
   }
 
   body {
     font-size: 15px;
-    padding-top: 72px; /* exact navbar height */
-  }
-
-  section {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    padding-top: 72px; /* navbar height */
   }
 
   /* ---------------- NAVBAR ---------------- */
@@ -310,15 +306,16 @@ section {
     font-size: 1rem !important;
   }
 
-  /* Welcome text visible at top, hidden on scroll */
+  /* Welcome text visible only at top */
   .nav-welcome {
-    display: block !important;
     opacity: 1;
     transform: none;
   }
 
+  /* Hide welcome text when scrolling */
   .uk-sticky-below .nav-welcome {
     opacity: 0 !important;
+    transform: translateY(-6px);
     pointer-events: none;
   }
 
@@ -328,38 +325,32 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 24px 16px 40px;
     text-align: center;
+    padding: 24px 16px 40px;
   }
 
   .home-content {
-    width: 100%;
     max-width: 100%;
     margin: 0;
-    text-align: center;
   }
 
   .home-title {
-    width: 100%;
     font-size: 1.9rem;
     line-height: 1.35;
     margin-bottom: 24px;
     white-space: normal;
-    letter-spacing: 0;
   }
 
   .hero-name {
     font-size: 2.1rem;
     white-space: normal;
-    display: inline;
   }
 
-  /* ---------------- BUTTONS ---------------- */
+  /* ---------------- HERO BUTTONS ---------------- */
   .hero-buttons {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 12px;
     margin-top: 24px;
   }
@@ -383,32 +374,54 @@ section {
     border-radius: 18px;
   }
 
-  /* ---------------- HEADINGS (CRITICAL FIX) ---------------- */
-  h1, h2, h3 {
+  /* ---------------- SECTION & CONTAINER FIX ---------------- */
+  section,
+  .uk-section,
+  .uk-container {
     width: 100%;
     max-width: 100%;
     margin-left: auto !important;
     margin-right: auto !important;
-    padding: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* ---------------- HEADING FIX (IMPORTANT) ---------------- */
+  h1, h2, h3 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
     text-align: center !important;
-    letter-spacing: 0 !important;
+    line-height: 1.35 !important;
+
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+
     white-space: normal !important;
-    word-break: break-word;
+    word-break: break-word !important;
   }
 
-  section > h2,
-  section > h3 {
-    margin-top: 48px;
-    margin-bottom: 24px;
+  section h2,
+  section h3 {
+    margin-top: 48px !important;
+    margin-bottom: 28px !important;
   }
 
-  /* ---------------- CONTENT & CARDS ---------------- */
-  .uk-container {
-z{
-    padding-left: 16px;
-    padding-right: 16px;
+  /* ---------------- UIKIT GRID RESET ---------------- */
+  .uk-grid,
+  .uk-grid > * {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
   }
 
+  /* ---------------- CARDS ---------------- */
   .uk-card {
     padding: 18px !important;
     font-size: 0.95rem;
@@ -416,26 +429,23 @@ z{
 
   .uk-card-title {
     font-size: 1.1rem !important;
-    line-height: 1.4;
     text-align: center;
   }
 
   .uk-card p {
     font-size: 0.95rem;
     line-height: 1.6;
-    text-align: left;
   }
 
   /* ---------------- CONTACT SECTION ---------------- */
-  #contact {
-    text-align: center;
+  #contact,
+  #contact * {
+    text-align: center !important;
   }
 
-  #contact p,
-  #contact a {
-    display: block;
-    width: 100%;
-    text-align: center;
+  #contact a,
+  #contact p {
     word-break: break-word;
   }
 }
+
