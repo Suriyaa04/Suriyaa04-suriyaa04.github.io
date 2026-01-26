@@ -275,20 +275,20 @@ section {
 
 /* for mobile */
 
-/* ================= FINAL MOBILE FIX (CLEAN & STABLE) ================= */
+/* ================= FINAL MOBILE FIX (LEFT ALIGNED & STABLE) ================= */
 @media (max-width: 768px) {
 
   /* ---------- GLOBAL ---------- */
   html, body {
-    width: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
     overflow-x: hidden;
   }
 
   body {
     font-size: 15px;
-    padding-top: 64px; /* fixed navbar height */
+    padding-top: 64px; /* mobile navbar height */
   }
 
   /* ---------- NAVBAR ---------- */
@@ -301,6 +301,8 @@ section {
     padding: 12px 16px;
     background: rgba(15, 15, 15, 0.95);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
     z-index: 1000;
   }
 
@@ -310,20 +312,26 @@ section {
 
   /* ---------- HERO ---------- */
   .home-hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 72px 16px 40px;
-    text-align: center;
+    text-align: left;
   }
 
   .home-content {
     max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
   }
 
   .home-title {
     font-size: 1.9rem;
     line-height: 1.35;
+    margin-bottom: 20px;
     white-space: normal;
+    text-align: left;
   }
 
   .hero-name {
@@ -331,41 +339,26 @@ section {
     white-space: normal;
   }
 
-  /* ---------- 🔥 UNIVERSAL HEADING FIX ---------- */
-  h1, h2, h3 {
-    position: relative;
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    text-align: center !important;
-    padding: 0 16px;
-    box-sizing: border-box;
-    transform: none !important;
-  }
-
-  h2, h3 {
-    font-size: 1.5rem;
-    margin-bottom: 24px;
-  }
-
-  /* ---------- BUTTONS ---------- */
+  /* ---------- HERO BUTTONS ---------- */
   .hero-buttons {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    margin-top: 24px;
   }
 
   .hero-buttons .uk-button {
     width: 100%;
     padding: 12px 0;
     font-size: 0.9rem;
+    text-align: center;
   }
 
   /* ---------- PROFILE IMAGE ---------- */
   .home-image {
     margin-top: 28px;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -376,14 +369,30 @@ section {
     border-radius: 18px;
   }
 
+  /* ---------- ALL SECTION HEADINGS (LEFT ALIGNED) ---------- */
+  h1, h2, h3 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 24px 0;
+    padding: 0 16px;
+    text-align: left !important;
+    box-sizing: border-box;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+
   /* ---------- CARDS ---------- */
   .uk-card {
     padding: 18px !important;
+    font-size: 0.95rem;
   }
 
   .uk-card-title {
-    text-align: center;
     font-size: 1.1rem !important;
+    line-height: 1.4;
+    text-align: left;
   }
 
   .uk-card p {
@@ -392,7 +401,7 @@ section {
     text-align: left;
   }
 
-  /* ---------- CONTAINER RESET ---------- */
+  /* ---------- CONTAINERS ---------- */
   .uk-container {
     padding-left: 16px;
     padding-right: 16px;
@@ -400,13 +409,12 @@ section {
 
   /* ---------- CONTACT ---------- */
   #contact {
-    text-align: center;
+    text-align: left;
   }
 
   #contact p,
   #contact a {
-    word-break: break-word;
     font-size: 0.95rem;
+    word-break: break-word;
   }
-
 }
