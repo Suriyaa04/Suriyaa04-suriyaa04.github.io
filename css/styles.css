@@ -271,39 +271,29 @@ section {
     }
 }
 
-/* for mobile */
 
+
+/* for mobile */
+/* ================= MOBILE FIXES ================= */
 @media (max-width: 768px) {
 
-  /* General text scaling */
+  /* ---------- GLOBAL ---------- */
+  html, body {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
   body {
     font-size: 15px;
+    padding-top: 72px; /* navbar height */
   }
 
-  /* Project cards */
-  .uk-card {
-    padding: 18px !important;
-    font-size: 0.95rem;
-  }
-
-  /* Card titles */
-  .uk-card-title {
-    font-size: 1.05rem !important;
-    line-height: 1.4;
-  }
-
-  /* Paragraph text */
-  .uk-card p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-
-}
-
-@media (max-width: 768px) {
-
+  /* ---------- NAVBAR ---------- */
   .uk-navbar-container {
     padding: 14px 16px;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
   }
 
   .uk-navbar-item,
@@ -311,13 +301,94 @@ section {
     font-size: 1rem;
   }
 
-}
+  .nav-welcome {
+    display: block;
+    opacity: 1;
+    transform: none;
+  }
 
-@media (max-width: 768px) {
+  /* ---------- HERO ---------- */
+  .home-hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 40px;
+    text-align: center;
+  }
 
+  .home-content {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .home-title {
+    font-size: 1.9rem;
+    line-height: 1.35;
+    margin-bottom: 24px;
+    white-space: normal;
+  }
+
+  .hero-name {
+    font-size: 2.1rem;
+    white-space: normal;
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .hero-buttons .uk-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 0.9rem;
+  }
+
+  /* ---------- PROFILE IMAGE ---------- */
+  .home-profile-img {
+    width: 220px;
+    max-width: 85%;
+    border-radius: 18px;
+    margin-top: 28px;
+  }
+
+  /* ---------- CONTENT ---------- */
   .uk-container {
     padding-left: 16px;
     padding-right: 16px;
   }
 
+  .uk-card {
+    padding: 18px !important;
+    font-size: 0.95rem;
+  }
+
+  .uk-card-title {
+    font-size: 1.1rem !important;
+  }
+
+  .uk-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* ---------- HEADINGS ---------- */
+  h2, h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* ---------- CONTACT ---------- */
+  #contact {
+    text-align: center;
+  }
+
+  #contact a,
+  #contact p {
+    word-break: break-word;
+  }
 }
