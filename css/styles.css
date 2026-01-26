@@ -292,6 +292,7 @@ section {
   /* ---------- NAVBAR ---------- */
   .uk-navbar-container {
     padding: 14px 16px;
+    min-height: 72px;     /* 🔥 ADD THIS */
     background: rgba(15, 15, 15, 0.95);
     backdrop-filter: blur(10px);
   }
@@ -301,11 +302,20 @@ section {
     font-size: 1rem;
   }
 
-  .nav-welcome {
-    display: block;
-    opacity: 1;
-    transform: none;
-  }
+  /* Default: visible at top */
+.nav-welcome {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* When scrolling (sticky state) */
+.uk-sticky-below .nav-welcome {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+}
+
 
   /* ---------- HERO ---------- */
   .home-hero {
@@ -392,3 +402,4 @@ section {
     word-break: break-word;
   }
 }
+
