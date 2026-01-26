@@ -275,82 +275,78 @@ section {
 
 /* for mobile */
 
-/* ================= FINAL MOBILE FIX ================= */
+/* =========================================================
+   FINAL MOBILE FIX – DO NOT EDIT ABOVE THIS
+   ========================================================= */
 @media (max-width: 768px) {
 
-  /* ---------- GLOBAL ---------- */
+  /* ---------------- GLOBAL RESET ---------------- */
   html, body {
-    height: auto;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
   }
 
   body {
     font-size: 15px;
-    padding-top: 64px; /* exact mobile navbar height */
+    padding-top: 72px; /* navbar height */
   }
 
-  /* ---------- NAVBAR ---------- */
+  /* ---------------- NAVBAR ---------------- */
   .uk-navbar-container {
-    padding: 12px 16px;
-    background: rgba(15, 15, 15, 0.95);
+    padding: 14px 16px !important;
+    background: rgba(15, 15, 15, 0.95) !important;
     backdrop-filter: blur(10px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-  }
-
-  .uk-navbar-center {
-    margin: 0 auto !important;
-    text-align: center !important;
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .uk-navbar-item,
   .uk-navbar-nav > li > a {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
-  /* Hide welcome text ONLY when scrolling */
+  /* Welcome text visible only at top */
+  .nav-welcome {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Hide welcome text when scrolling */
   .uk-sticky-below .nav-welcome {
-    opacity: 0;
+    opacity: 0 !important;
     transform: translateY(-6px);
     pointer-events: none;
   }
 
-  /* ---------- SECTION OFFSET (SCROLL FIX) ---------- */
-  section {
-    scroll-margin-top: 64px;
-  }
-
-  /* ---------- HERO SECTION ---------- */
+  /* ---------------- HERO SECTION ---------------- */
   .home-hero {
     min-height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 8px 16px 40px;
     text-align: center;
+    padding: 24px 16px 40px;
   }
 
   .home-content {
     max-width: 100%;
     margin: 0;
-    text-align: center;
   }
 
   .home-title {
     font-size: 1.9rem;
     line-height: 1.35;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     white-space: normal;
   }
 
   .hero-name {
     font-size: 2.1rem;
     white-space: normal;
-    display: inline-block;
   }
 
-  /* ---------- HERO BUTTONS ---------- */
+  /* ---------------- HERO BUTTONS ---------------- */
   .hero-buttons {
     display: flex;
     flex-direction: column;
@@ -365,7 +361,7 @@ section {
     font-size: 0.9rem;
   }
 
-  /* ---------- PROFILE IMAGE ---------- */
+  /* ---------------- PROFILE IMAGE ---------------- */
   .home-image {
     margin-top: 28px;
     display: flex;
@@ -378,48 +374,77 @@ section {
     border-radius: 18px;
   }
 
-  /* ---------- ALL SECTION TITLES (FIXED CENTER) ---------- */
-  h2, h3 {
-    text-align: center !important;
+  /* ---------------- SECTION & CONTAINER FIX ---------------- */
+  section,
+  .uk-section,
+  .uk-container {
+    width: 100%;
+    max-width: 100%;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 100%;
-    font-size: 1.5rem;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
-  /* ---------- CARDS ---------- */
+  /* ---------------- HEADING FIX (IMPORTANT) ---------------- */
+  h1, h2, h3 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    text-align: center !important;
+    line-height: 1.35 !important;
+
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  section h2,
+  section h3 {
+    margin-top: 48px !important;
+    margin-bottom: 28px !important;
+  }
+
+  /* ---------------- UIKIT GRID RESET ---------------- */
+  .uk-grid,
+  .uk-grid > * {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  /* ---------------- CARDS ---------------- */
   .uk-card {
     padding: 18px !important;
     font-size: 0.95rem;
   }
 
   .uk-card-title {
-    text-align: center;
     font-size: 1.1rem !important;
-    line-height: 1.4;
+    text-align: center;
   }
 
   .uk-card p {
     font-size: 0.95rem;
     line-height: 1.6;
-    text-align: left;
   }
 
-  /* ---------- CONTAINERS ---------- */
-  .uk-container {
-    padding-left: 16px;
-    padding-right: 16px;
+  /* ---------------- CONTACT SECTION ---------------- */
+  #contact,
+  #contact * {
+    text-align: center !important;
   }
 
-  /* ---------- CONTACT SECTION ---------- */
-  #contact {
-    text-align: center;
-  }
-
-  #contact p,
-  #contact a {
-    font-size: 0.95rem;
+  #contact a,
+  #contact p {
     word-break: break-word;
   }
-
 }
