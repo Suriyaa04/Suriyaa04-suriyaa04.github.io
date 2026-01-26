@@ -47,6 +47,12 @@ html{
     font-size: 1.1rem;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
 /* Project cards hover animation */
 #projects .uk-card {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -263,4 +269,55 @@ section {
     .home-profile-img {
         width: 420px;
     }
+}
+
+/* for mobile */
+
+@media (max-width: 768px) {
+
+  /* General text scaling */
+  body {
+    font-size: 15px;
+  }
+
+  /* Project cards */
+  .uk-card {
+    padding: 18px !important;
+    font-size: 0.95rem;
+  }
+
+  /* Card titles */
+  .uk-card-title {
+    font-size: 1.05rem !important;
+    line-height: 1.4;
+  }
+
+  /* Paragraph text */
+  .uk-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .uk-navbar-container {
+    padding: 14px 16px;
+  }
+
+  .uk-navbar-item,
+  .uk-navbar-nav > li > a {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .uk-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
 }
